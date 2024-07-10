@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+         rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+         rel="stylesheet" />
+      <title>Document</title>
+   </head>
+   <style>
+      :root {
+         --yellow: #f4d04e;
+      }
+      *,
+      *::before,
+      *::after {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+      body {
+         background-color: var(--yellow);
+         font-family: "Figtree", sans-serif;
+      }
+      main {
+         background-color: #fff;
+         display: flex;
+         flex-direction: column;
+         width: 384px;
+         border-radius: 20px;
+         border: 1px solid black;
+         box-shadow: 8px 8px 0px 0px #000;
+         padding: 24px;
+         margin: auto;
+         gap: 24px;
+         transform: translateY(25%);
+      }
+      .card-image {
+         border-radius: 10px;
+         height: 200px;
+         background-repeat: no-repeat;
+         background-image: url(./blogimage.png);
+      }
+      .card-content {
+         height: 194px;
+         display: flex;
+         gap: 12px;
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: center;
+      }
+      .category {
+         background-color: var(--yellow);
+         padding: 4px 12px;
+         border-radius: 4px;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 800;
+         line-height: 150%;
+      }
+      .category span {
+         font-weight: bold;
+      }
+
+      .card-content h1 {
+         font-weight: 800;
+         line-height: 150%;
+         font-size: 24px;
+      }
+
+      .card-content h1:hover {
+         color: var(--Yellow, #f4d04e);
+         cursor: pointer;
+      }
+      .card-content #desc {
+         color: var(--Grey, #7f7f7f);
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 500;
+         line-height: 150%;
+      }
+
+      .author {
+         height: 32px;
+         display: flex;
+         gap: 10px;
+         align-items: center;
+      }
+      .author .img {
+         width: 35px;
+         height: 35px;
+         object-fit: cover;
+         background: url(./user-pic.jpeg) lightgray 50% / cover no-repeat;
+         border-radius: 50%;
+      }
+      .author p {
+         font-family: "Figtree";
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 800;
+         line-height: 150%;
+      }
+      @media screen and (max-width: 768px) {
+         main {
+            width: 327px;
+            padding: 24px;
+            gap: 24px;
+            transform: translateY(25%);
+         }
+         .card-content p {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 150%;
+         }
+         h1 {
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 150%;
+         }
+         #desc {
+            color: #7f7f7f;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 150%;
+         }
+      }
+   </style>
+   <body>
+      <main role="main">
+         <div class="card-image"></div>
+         <div class="card-content">
+            <!-- Category -->
+            <div class="category">
+               <span>Learning</span>
+            </div>
+
+            <!-- public date -->
+            <div class="public-date">
+               <p>Published 21 Dec 2023</p>
+            </div>
+
+            <!-- Title -->
+            <h1>HTML & CSS foundations</h1>
+            <p id="desc">
+               These languages are the backdone of every website, defining
+               structure, content, and presentation
+            </p>
+         </div>
+
+         <!-- Author -->
+         <div class="author">
+            <div class="img"></div>
+            <p>Greg Hooper</p>
+         </div>
+      </main>
+   </body>
+</html>
